@@ -2,22 +2,24 @@
 //
 
 #include <iostream>
+#include <map>
+#include <list>
 using namespace std;
 
 
 
-void NewOrder()
+void DailySummary()
 {
 
 }
 
-void DailySummary()
+void NewOrder()
 {
     string DiningMode;
 
     while (true)
     { 
-        cout << "1) Dine-In\n2) Take-Away\n";
+        cout << "\n1) Dine-In\n2) Take-Away\n";
         cin >> DiningMode;
         if (DiningMode == "1") 
         {
@@ -34,20 +36,37 @@ void DailySummary()
         }
     }
 
-    cout << "Options:\n1) Cappuccino $3.00\n2) Espresso $2.25\n3) Latte $2.50\n4) Iced Coffee $2.50\n";
+    cout << "\nOptions:\n1) Cappuccino $3.00\n2) Espresso $2.25\n3) Latte $2.50\n4) Iced Coffee $2.50\n5) Finish Order\n";
     int counter = 0;
+    string OrderItem;
+    
+    list<string> ORDERITEMS;
 
     while (counter <= 4)
     {  
         cin >> OrderItem;
-        if (DiningMode == "1") 
+        if (OrderItem == "1") 
         {
-            int tax = 1;
-            break;
+            ORDERITEMS.push_back("Cappuccino");
+            counter += 1;
         }
-        else if (DiningMode == "2") 
+        else if (OrderItem == "2") 
         {
-            int tax = 1.05;
+            ORDERITEMS.push_back("Espresso");
+            counter += 1;
+        }
+        else if (OrderItem == "3")
+        {
+            ORDERITEMS.push_back("Latte");
+            counter += 1;
+        }
+        else if (OrderItem == "4")
+        {
+            ORDERITEMS.push_back("Iced Coffee");
+            counter += 1;
+        }
+        else if (OrderItem == "5")
+        {
             break;
         }
         else {
@@ -55,6 +74,11 @@ void DailySummary()
         }
     }
 
+    cout << "\nCurrent Order: ";
+    for (string CurrentItem : ORDERITEMS)
+    {
+        cout << CurrentItem << ", ";
+    }
 
 
 
@@ -63,18 +87,31 @@ void DailySummary()
 
 int main()
 {
-    
+    map<float, string> ITEMS = { {3.00, "Cappucino",},
+                               {2.25, "Espresso",},
+                               {2.50, "Latte",},
+                               {2.50, "Iced Coffee",}
+    };
+
     string OrderType;
     cout << "1) New Order\n2) Daily Summary\n";
     cin >> OrderType;
 
-    if (OrderType == "1") 
+    while (true)
     {
-        NewOrder();
-    }
-    else if (OrderType == "2") 
-    {
-        DailySummary();
+        if (OrderType == "1") 
+        {
+            NewOrder();
+            break;
+        }
+        else if (OrderType == "2") 
+        {
+            DailySummary();
+            break;
+        }
+        else {
+            cout << "Error: Select Actual Option";
+        }
     }
 
     return 0;
