@@ -74,12 +74,11 @@ void NewOrder()
         }
     }
 
-    cout << "\nCurrent Order: ";
-    for (string CurrentItem : ORDERITEMS)
-    {
-        cout << CurrentItem << ", ";
-    }
-
+    //cout << "\nMenu Items: ";
+    //for (string CurrentItem : ORDERITEMS)
+    //{
+    //    cout << CurrentItem << ", ";
+    //}
 
 
 
