@@ -1,5 +1,1 @@
-﻿  cafe-au-lait-JammuScrub.cpp
-\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(14,16): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(31): warning C4715: 'Type': not all control paths return a value
-\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(16): warning C4715: 'Tax': not all control paths return a value
-  cafe-au-lait-JammuScrub.vcxproj -> \\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\Debug\cafe-au-lait-JammuScrub.exe
+﻿LINK : fatal error LNK1104: cannot open file '\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\Debug\cafe-au-lait-JammuScrub.exe'

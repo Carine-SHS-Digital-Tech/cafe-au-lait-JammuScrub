@@ -42,7 +42,7 @@ void NewOrder()
     
     list<string> ORDERITEMS;
 
-    while (counter <= 4)
+    while (counter < 4)
     {  
         cin >> OrderItem;
         if (OrderItem == "1") 
@@ -70,16 +70,40 @@ void NewOrder()
             break;
         }
         else {
-            cout << "Error: Select Actual Option";
+            cout << "Error: Select Actual Option\n";
         }
     }
 
-    //cout << "\nMenu Items: ";
-    //for (string CurrentItem : ORDERITEMS)
-    //{
-    //    cout << CurrentItem << ", ";
-    //}
+    int QuantityC = 0;
+    int QuantityE = 0;
+    int QuantityL = 0;
+    int QuantityI = 0;
 
+    for (string CurrentItem : ORDERITEMS)
+    {
+        if (CurrentItem == "Cappuccino")
+            QuantityC += 1;
+        else if (CurrentItem == "Espresso")
+            QuantityE += 1;
+        else if (CurrentItem == "Latte")
+            QuantityL += 1;
+        else if (CurrentItem == "Iced Coffee")
+            QuantityI += 1;
+    }
+
+    float PriceC = 3 * 1.1 * QuantityC;
+    float PriceE = 2.25 * 1.1 * QuantityE;
+    float PriceL = 2.5 * 1.1 * QuantityL;
+    float PriceI = 2.5 * 1.1 * QuantityI;
+
+
+
+
+    cout << "|  Quantity  |  Menu Item  |  Single Item + Ex GST  |  Single Item + GST  |  Total Line Item Value  |\n";
+    cout << "|     " << QuantityC << "      |" << "  Cappuccino |" << "        $3.00           |" << "         $3.30        |" << "        $" << round(PriceC) << "        |" << "\n";
+    cout << "|     " << QuantityE << "      |" << "   Espresso  |" << "        $2.25           |" << "         $2.47        |" << "        $" << round(PriceE) << "        |" << "\n";
+    cout << "|     " << QuantityL << "      |" << "    Latte    |" << "        $2.50           |" << "         $2.75        |" << "        $" << round(PriceL) << "        |" << "\n";
+    cout << "|     " << QuantityI << "      |" << " Iced Coffee |" << "        $2.50           |" << "         $2.75        |" << "        $" << round(PriceI) << "        |" << "\n";
 
 
 }
