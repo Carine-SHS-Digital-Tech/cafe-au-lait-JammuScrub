@@ -6,8 +6,6 @@
 #include <list>
 using namespace std;
 
-
-
 void DailySummary()
 {
 
@@ -17,18 +15,20 @@ void NewOrder()
 {
     string DiningMode;
 
+    float tax = 0;
+
     while (true)
     { 
         cout << "\n1) Dine-In\n2) Take-Away\n";
         cin >> DiningMode;
         if (DiningMode == "1") 
         {
-            int tax = 1;
+            tax = 0;
             break;
         }
         else if (DiningMode == "2") 
         {
-            int tax = 1.05;
+            tax = 0.05;
             break;
         }
         else {
@@ -96,41 +96,62 @@ void NewOrder()
     float PriceL = 2.5 * 1.1 * QuantityL;
     float PriceI = 2.5 * 1.1 * QuantityI;
 
+    float EXTRACHARGES = (PriceC + PriceE + PriceL + PriceI) * tax;
+    float AMOUNTDUE = (PriceC + PriceE + PriceL + PriceI) * (1 + tax);
+    
 
-
+    
 
     cout << "|  Quantity  |  Menu Item  |  Single Item + Ex GST  |  Single Item + GST  |  Total Line Item Value  |\n";
-    cout << "|     " << QuantityC << "      |" << "  Cappuccino |" << "        $3.00           |" << "         $3.30        |" << "        $" << round(PriceC) << "        |" << "\n";
-    cout << "|     " << QuantityE << "      |" << "   Espresso  |" << "        $2.25           |" << "         $2.47        |" << "        $" << round(PriceE) << "        |" << "\n";
-    cout << "|     " << QuantityL << "      |" << "    Latte    |" << "        $2.50           |" << "         $2.75        |" << "        $" << round(PriceL) << "        |" << "\n";
-    cout << "|     " << QuantityI << "      |" << " Iced Coffee |" << "        $2.50           |" << "         $2.75        |" << "        $" << round(PriceI) << "        |" << "\n";
+    cout << "|     " << QuantityC << "      |" << "  Cappuccino |" << "         $3.00          |" << "        $3.30        |";
+    printf_s("          $%.2f          |\n", PriceC);
+    cout << "|     " << QuantityE << "      |" << "   Espresso  |" << "         $2.25          |" << "        $2.47        |";
+    printf_s("          $%.2f          |\n", PriceE);
+    cout << "|     " << QuantityL << "      |" << "    Latte    |" << "         $2.50          |" << "        $2.75        |";
+    printf_s("          $%.2f          |", PriceL);
+    printf_s(" EXTRA CHARGES: $%.2f |\n", EXTRACHARGES);
+    cout << "|     " << QuantityI << "      |" << " Iced Coffee |" << "         $2.50          |" << "        $2.75        |";
+    printf_s("          $%.2f          |", PriceI);
+    printf_s(" AMOUNT DUE: $%.2f    |\n", AMOUNTDUE);
 
+    float AmountTendered = 0;
+    cout << "Amount Tendered: ";
+    cin >> AmountTendered;
 
+    float ChangeRequired = AmountTendered - AMOUNTDUE;
+
+    cout << "|  Quantity  |  Menu Item  |  Single Item + Ex GST  |  Single Item + GST  |  Total Line Item Value  |\n";
+    cout << "|     " << QuantityC << "      |" << "  Cappuccino |" << "         $3.00          |" << "        $3.30        |";
+    printf_s("          $%.2f          |\n", PriceC);
+    cout << "|     " << QuantityE << "      |" << "   Espresso  |" << "         $2.25          |" << "        $2.47        |";
+    printf_s("          $%.2f          |\n", PriceE);
+    cout << "|     " << QuantityL << "      |" << "    Latte    |" << "         $2.50          |" << "        $2.75        |";
+    printf_s("          $%.2f          |", PriceL);
+    printf_s(" AMOUNT TENDERED: $%.2f|\n", AmountTendered);
+    cout << "|     " << QuantityI << "      |" << " Iced Coffee |" << "         $2.50          |" << "        $2.75        |";
+    printf_s("          $%.2f          |", PriceI);
+    printf_s(" CHANGE REQUIRED: $%.2f |\n", ChangeRequired);
+
+    return;
 }
 
 int main()
 {
-    map<float, string> ITEMS = { {3.00, "Cappucino",},
-                               {2.25, "Espresso",},
-                               {2.50, "Latte",},
-                               {2.50, "Iced Coffee",}
-    };
 
     string OrderType;
-    cout << "1) New Order\n2) Daily Summary\n";
-    cin >> OrderType;
+    
 
     while (true)
     {
+        cout << "1) New Order\n2) Daily Summary\n";
+        cin >> OrderType;
         if (OrderType == "1") 
         {
             NewOrder();
-            break;
         }
         else if (OrderType == "2") 
         {
             DailySummary();
-            break;
         }
         else {
             cout << "Error: Select Actual Option";

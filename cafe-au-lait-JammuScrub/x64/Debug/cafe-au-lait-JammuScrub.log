@@ -1,28 +1,7 @@
 ﻿  cafe-au-lait-JammuScrub.cpp
-\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(31,21): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(31,23): warning C4305: '=': truncation from 'double' to 'float'
 \\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(94,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 \\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(95,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 \\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(96,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 \\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(97,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\utility(193,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
-          with
-          [
-              _Ty=double
-          ]
-          and
-          [
-              _Ty1=const float
-          ]
-\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(117): message : see reference to function template instantiation 'std::pair<const float,std::string>::pair<double,const char(&)[10],0>(_Other1 &&,_Other2) noexcept(false)' being compiled
-          with
-          [
-              _Other1=double,
-              _Other2=const char (&)[10]
-          ]
-\\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(113): message : see reference to function template instantiation 'std::pair<const float,std::string>::pair<double,const char(&)[10],0>(_Other1 &&,_Other2) noexcept(false)' being compiled
-          with
-          [
-              _Other1=double,
-              _Other2=const char (&)[10]
-          ]
   cafe-au-lait-JammuScrub.vcxproj -> \\E4057S01SV001.BLUE.schools.internal\fsE4057S01-StudentFolders$\james.edmiston\My Documents\GitHub\cafe-au-lait-JammuScrub\x64\Debug\cafe-au-lait-JammuScrub.exe
