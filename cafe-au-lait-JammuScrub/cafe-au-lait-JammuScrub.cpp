@@ -5,28 +5,37 @@
 #include <list>
 using namespace std;
 
+//Global total variables
 int TotalDineIn = 0;
 int TotalTakeAway = 0;
 int TotalOrders = 0;
 int TotalCups = 0;
-int TotalIncome = 0;
-int TotalGST = 0;
+float TotalIncome = 0;
+float TotalGST = 0;
 int CappuccinoCount = 0;
 int EspressoCount = 0;
 int LatteCount = 0;
 int IcedCoffeeCount = 0;
 
+//Creating the .csv
 ofstream DailySummaryCSV("DailySummary.csv");
 
+//Function to round to 2 decimal places / nearest cent
+float round2(float var)
+{
+    float value = (int)(var * 100 + .5);
+    return (float)value / 100;
+}
 
 void DailySummary()
 {
-
+    //Prints the daily summary
     cout << setw(13) << "Total Dine-In" << "|" << setw(20) << "Total Take-Away" << "|" << setw(20) << "Total Cups" << "|" << setw(20) << "Total Orders" << "|" << setw(20) << "Total Income" << "|" << setw(20) << "GST Collected" << "|" << endl;
-    cout << setw(13) << TotalDineIn << "|" << setw(20) << TotalTakeAway << "|" << setw(20) << TotalCups << "|" << setw(20) << TotalOrders << "|" << setw(20) << TotalIncome << "|" << setw(20) << TotalGST << "|" << endl;
+    cout << setw(13) << TotalDineIn << "|" << setw(20) << TotalTakeAway << "|" << setw(20) << TotalCups << "|" << setw(20) << TotalOrders << "|" << setw(20) << round2(TotalIncome) << "|" << setw(20) << round2(TotalGST) << "|" << endl;
 
+    //Adds the totals to the .csv
     DailySummaryCSV << "\nORDERS_COUNT,DINE-IN,TAKE-AWAY,CAPPUCCINO_COUNT,ESPRESSO_COUNT,LATTE_COUNT,ICED COFFEE_COUNT,CUPS_COUNT,GST_COLLECTED,DAILY_INCOME\n";
-    DailySummaryCSV << TotalOrders << "," << TotalDineIn << "," << TotalTakeAway << "," << CappuccinoCount << "," << EspressoCount << "," << LatteCount << "," << IcedCoffeeCount << "," << TotalCups << "," << TotalGST << "," << TotalIncome;
+    DailySummaryCSV << TotalOrders << "," << TotalDineIn << "," << TotalTakeAway << "," << CappuccinoCount << "," << EspressoCount << "," << LatteCount << "," << IcedCoffeeCount << "," << TotalCups << "," << round2(TotalGST) << "," << round2(TotalIncome);
 
     DailySummaryCSV.close();
     return;
@@ -149,17 +158,17 @@ void NewOrder()
 
     //Adding total cups and gst to .csv
     DailySummaryCSV << "," << (QuantityC + QuantityE + QuantityL + QuantityI);
-    DailySummaryCSV << "," << (PriceGSTC + PriceGSTE + PriceGSTL + PriceGSTI);
+    DailySummaryCSV << "," << round2((PriceGSTC + PriceGSTE + PriceGSTL + PriceGSTI));
 
     //Calculating extracharges
     float ExtraCharges = (PriceC + PriceE + PriceL + PriceI) * tax;
 
     //Adding extra charges to .csv
-    DailySummaryCSV << "," << ExtraCharges;
+    DailySummaryCSV << "," << round2(ExtraCharges);
 
     //Addubg amount due to .csv and total
     float AmountDue = (PriceC + PriceE + PriceL + PriceI) * (1 + tax);
-    DailySummaryCSV << "," << AmountDue;
+    DailySummaryCSV << "," << round2(AmountDue);
 
     //Printing the order table
     cout << "|  Quantity  |  Menu Item  |  Single Item + Ex GST  |  Single Item + GST  |  Total Line Item Value  |\n";
