@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 #include <iomanip>
 #include <fstream>
 #include <map>
@@ -185,12 +186,24 @@ void NewOrder()
 
     //Calculating the amount of change required
     float AmountTendered = 0;
-    cout << "Amount Tendered: ";
-    cin >> AmountTendered;
+
+    while (true)
+    {
+        cout << "Amount Tendered: ";
+        cin >> AmountTendered;
+        if (AmountTendered >= AmountDue)
+        {
+            break;
+        }
+        else
+            cout << "Error: Broke\n";
+    }
+    
+    
     float ChangeRequired = AmountTendered - AmountDue;
 
     //Printing the sales reciept
-    cout << "SALES RECIEPT:\n";
+    cout << "\nSALES RECIEPT:\n";
     cout << "|  Quantity  |  Menu Item  |  Single Item + Ex GST  |  Single Item + GST  |  Total Line Item Value  |\n";
     cout << "|     " << QuantityC << "      |" << "  Cappuccino |" << "         $3.00          |" << "        $3.30        |";
     printf_s("          $%.2f          |\n", PriceC);
@@ -202,12 +215,16 @@ void NewOrder()
     cout << "|     " << QuantityI << "      |" << " Iced Coffee |" << "         $2.50          |" << "        $2.75        |";
     printf_s("          $%.2f          |", PriceI);
     printf_s(" CHANGE REQUIRED: $%.2f |\n", ChangeRequired);
+    cout << "\n";
 
     return;
 }
 
 int main()
 {
+    //Fullscreens window
+    ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
+
     //Adding headings to .csv
     DailySummaryCSV << "ORDER_ID,TYPE,ITEM_1,QTY_1,EXGST_1,ITEM_2,QTY_2,EXGST_2,ITEM_3,QTY_3,EXGST_3,ITEM_4,QTY_4,EXGST_4,ORDER_CUPS,ORDER_GST,ORDER_TAX,ORDER_TOTAL";
     
