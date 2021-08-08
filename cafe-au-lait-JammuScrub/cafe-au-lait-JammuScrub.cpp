@@ -153,7 +153,7 @@ void NewOrder()
     float PriceGSTI = 2.5 * 1.1 * QuantityI - 2.5 * QuantityI;
 
     //Adding to totals
-    TotalIncome += (PriceC + PriceE + PriceL + PriceI);
+    TotalIncome += (PriceC + PriceE + PriceL + PriceI + (PriceC + PriceE + PriceL + PriceI) * tax);
     TotalGST += (PriceGSTC + PriceGSTE + PriceGSTL + PriceGSTI);
     TotalCups += (QuantityC + QuantityE + QuantityL + QuantityI);
 
