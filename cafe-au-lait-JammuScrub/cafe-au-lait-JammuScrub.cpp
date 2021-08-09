@@ -73,7 +73,7 @@ void NewOrder()
             break;
         }
         else {
-            cout << "Error: Select Actual Option\n";
+            cout << "Error: Select Actual Option";
         }
     }
 
@@ -245,7 +245,7 @@ int main()
             DailySummary();
         }
         else {
-            cout << "Error: Select Actual Option";
+            cout << "Error: Select Actual Option\n";
         }
     }
 
