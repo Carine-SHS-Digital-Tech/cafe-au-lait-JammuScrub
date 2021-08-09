@@ -1,0 +1,17 @@
+﻿  cafe-au-lait-JammuScrub.cpp
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(27,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(70,23): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(144,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(145,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(146,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(147,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(150,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(151,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(152,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub\cafe-au-lait-JammuScrub.cpp(153,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  1 of 243 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  cafe-au-lait-JammuScrub.vcxproj -> C:\Users\james_vmancfg\OneDrive\Documents\GitHub\cafe-au-lait-JammuScrub\x64\Release\cafe-au-lait-JammuScrub.exe
